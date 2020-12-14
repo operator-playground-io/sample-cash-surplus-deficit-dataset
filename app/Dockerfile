@@ -4,7 +4,6 @@ WORKDIR /project
 
 RUN apt-get update && \
 apt-get install -y git && \
-git clone https://github.com/datasets/cash-surplus-deficit.git && \
 pip install Flask==1.1.2 && \
 pip install dash==1.18.1 && \
 pip install pandas==1.1.5
