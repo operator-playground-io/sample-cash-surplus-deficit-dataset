@@ -1,0 +1,21 @@
+apiVersion: skaffold/v2beta7
+kind: Config
+metadata:
+  name: dataset-python-example
+build:
+  artifacts:
+  - image: app
+    context: app
+    sync:
+      infer:
+      - '**/*'
+deploy:
+  kubectl:
+    manifests:
+      - ./k8s/*
+portForward:
+  - resourceType: service
+    resourceName: sample-dash-app
+    port: 8050
+    address: 0.0.0.0
+    localPort: 4503
