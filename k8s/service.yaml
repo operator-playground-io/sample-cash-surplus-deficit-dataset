@@ -6,7 +6,7 @@ metadata:
   name: sample-dash-app
 spec:
   ports:
-  - nodePort: 32433
+  - nodePort: 32101
     port: 8050
     protocol: TCP
     targetPort: 8050
