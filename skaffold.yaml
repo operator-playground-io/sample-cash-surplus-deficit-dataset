@@ -7,8 +7,9 @@ build:
   - image: app
     context: app
     sync:
-      infer:
-      - '**/*'
+      manual:
+      - src: 'app/*'
+        dest: /project/app/*
 deploy:
   kubectl:
     manifests:
