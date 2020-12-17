@@ -22,7 +22,7 @@ spec:
         app: sample-dash-app
     spec:
       containers:
-      - image: reusin/sample-dash-app:1.0
+      - image: app
         imagePullPolicy: IfNotPresent
         name: sample-dash-app
         resources: {}
